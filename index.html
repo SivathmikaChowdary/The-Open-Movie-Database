@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OMDb API Replica</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right-buttons button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    .patron { background-color: #e74c3c; }
+    .donate { background-color: #2ecc71; }
+    .contact { background-color: #555; }
+
+    .container {
+      padding: 30px 20px;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .description {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 20px;
+      max-width: 550px;
+    }
+
+    .poster {
+      background: #fff;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .poster img {
+      width: 100%;
+      height: auto;
+    }
+
+    .poster p {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .tesla-banner {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .tesla-banner img {
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .recaptcha {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .recaptcha img {
+      width: 45px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <span style="font-size: 18px;">OMDb API</span>
+      <a href="#">Usage</a>
+      <a href="#">Parameters</a>
+      <a href="#">Examples</a>
+      <a href="#">Change Log</a>
+      <a href="#">API Key</a>
+    </nav>
+    <div class="right-buttons">
+      <button class="patron">Become a Patron</button>
+      <button class="donate">Donate</button>
+      <button class="contact">Contact</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="top-section">
+      <div class="description">
+        <h1>OMDb API</h1>
+        <h3>The Open Movie Database</h3>
+        <p>
+          The OMDb API is a RESTful web service to obtain movie information, all content and images on the site are contributed and maintained by our users.
+        </p>
+        <p>
+          If you find this service useful, please consider making a <a href="#">one-time donation</a> or <a href="#">become a patron</a>.
+        </p>
+      </div>
+
+      <div class="poster-grid">
+        <div class="poster">
+          <img src="https://m.media-amazon.com/images/I/81G+6xWb+UL._AC_SY679_.jpg" alt="Poster 1">
+          <p>Poster API is only available to patrons.</p>
+        </div>
+        <div class="poster">
+          <img src="https://m.media-amazon.com/images/I/81ExhpBEbHL._AC_SY679_.jpg" alt="Poster 2">
+          <p>Over 280,000 posters, updated daily.</p>
+        </div>
+        <div class="poster">
+          <img src="https://m.media-amazon.com/images/I/51oDs3Q2MiL._AC_SY679_.jpg" alt="Poster 3">
+          <p>High resolution up to 2000x3000.</p>
+        </div>
+        <div class="poster">
+          <img src="https://m.media-amazon.com/images/I/51xJbFMRsxL._AC_SY679_.jpg" alt="Poster 4">
+          <p>Available via RESTful API.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tesla-banner">
+      <img src="https://cdn.motor1.com/images/mgl/M6e3R/s1/tesla-banner.jpg" alt="Tesla Banner">
+    </div>
+  </div>
+
+  <div class="recaptcha">
+    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA logo">
+  </div>
+
+</body>
+</html>
+
